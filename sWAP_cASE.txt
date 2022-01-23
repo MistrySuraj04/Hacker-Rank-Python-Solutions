@@ -1,0 +1,49 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :-
+	You are given a string and your task is to swap cases. In other words, convert all lowercase 
+	letters to uppercase letters and vice versa.
+
+	
+	For Example: 	Www.HackerRank.com → wWW.hACKERrANK.COM
+			Pythonist 2 → pYTHONIST 2 
+
+
+********************************************** SOLUTION **********************************************
+
+# Creating a swap_case function to alter the case of input string characters.
+def swap_case(input_string):
+    
+    # Creating a varibale to store the output string value.
+    output_string = ""
+    
+    # Using For loop to loop through every character of the input string.
+    for char in input_string:
+        
+        # islower() is in-built python string function which checks if the string is in lower case.
+        # Here we will be checking the character case with python string functions and if-elif 
+	# conditional statement.
+        if char.islower():
+            # Appending the character into output_string variable after changing it's case to upper 
+	    # using python string function upper().
+            output_string += char.upper()
+            
+        # isupper() is in-built python string function which checks if the string is in upper case.
+        elif char.isupper():
+            # Appending the character into output_string variale after changing it's case to lower 
+	    # using python string function lower().
+            output_string += char.lower()
+            
+        # Else part will execute if the character is neither upper nor lower case.
+        else:
+            # Appending the character as it is into the output_string variable.
+            output_string += char
+    
+    # Returning the output_string variable with string formed after swapping case stored in it.
+    return output_string
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)

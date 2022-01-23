@@ -1,0 +1,21 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 
+	The provided code stub reads two integers, a and b, from STDIN.
+
+	Add logic to print two lines. The first line should contain the result of integer division,  
+	// b. The second line should contain the result of float division, a/b.
+
+	No rounding or formatting is necessary.
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    a = int(input())
+    b = int(input())
+    
+    print( a // b ) # Printing the integer division of both the input numbers.
+    print( a / b ) # Printing the float division of both the input numbers.

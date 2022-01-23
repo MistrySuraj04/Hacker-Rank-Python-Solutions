@@ -1,0 +1,29 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 
+	Read a given string, change the character at a given index and then print the modified string.
+
+	Function Description :- 
+		Complete the mutate_string function in the editor below.
+		mutate_string has the following parameters:
+
+		1. string string: the string to change
+		2. int position: the index to insert the character at
+		3. string character: the character to insert
+
+
+********************************************** SOLUTION **********************************************
+
+def mutate_string(string, position, character):
+    
+    # Choosing string slicing and indexing method is simple and one liner answer.
+    # In string indexing when two parameters are passed then the first one represents the staring 
+    # index which is inclusive while the second value represents the ending index which is exclusive. 
+    return string[:position] + "{}".format(character) + string[position + 1:]
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)

@@ -1,0 +1,28 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Given an integer, n, and n space-separated integers as input, create a tuple, t, of those n 
+	integers. Then compute and print the result of hash(t).
+
+	Note: hash() is one of the functions in the __builtins__ module, so it need not be imported.
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    n = int(input())
+    
+    # split() is a python built-in string function which splits the string into pieces by the input 
+    # character and returns output in form of list.
+    # map() is a python built-in function which returns iterable after applying the condition to every 
+    # element of the input.
+    # tuple() is another python built-in type conversion function which is used to convert data type 
+    # of variable to tuple.
+    integer_tuple = tuple(map(int, input().split()))
+    
+    # Printing the has value of integer tuple.
+    print(hash(integer_tuple))
+    
+    

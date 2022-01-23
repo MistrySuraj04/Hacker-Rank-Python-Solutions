@@ -1,0 +1,52 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	The provided code stub will read in a dictionary containing key/value pairs of 
+	name:[marks] for a list of students. Print the average of the marks array for the student 
+	name provided, showing 2 places after the decimal.
+
+	EXAMPLE :-
+		marks key:value pairs are
+		'alpha': [20,30,40]
+		'beta': [30,50,70]
+		query_name = 'beta'
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    n = int(input())
+    
+    # Dictionary variable to store name and scores list of students.
+    student_marks = {}
+    
+    # Using for loop to take in and store input in dictionary.
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+        
+    # Taking name of student as input to show average.
+    query_name = input()
+    
+    # Using for loop to iterate through the input dictionary.
+    # Using items() to loop through both key and value pair of dictionary at the same time.
+    for name, score_list in student_marks.items():
+        
+        # Checking for the name in dictionary to be similar to user input.
+        if name == query_name:
+            
+            # Calculating the avergae score using python functions.
+            # Using length() python built-in function to fetch the number of elements in the list.
+            # Using sum() python built-in function to calculate the total of all the elements of the 
+	    # scores_list.
+            # At last calculating the average by dividing the sum with length.
+            list_length = len(score_list)
+            score_total = sum(score_list)
+            average_score = score_total / list_length
+            
+            # As we have used float division above so the output will be in float data type.
+            # Printing the average using :.2f to round value upto 2 digits.
+            print("{:.2f}".format(average_score))

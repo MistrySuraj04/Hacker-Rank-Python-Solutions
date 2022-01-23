@@ -1,0 +1,42 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Now, let's use our knowledge of sets and help Mickey.
+	Ms. Gabriel Williams is a botany professor at District College. One day, she asked her student 
+	Mickey to compute the average of all the plants with distinct heights in her greenhouse.
+
+	Function Description :-
+		Complete the average function in the editor below.
+		average has the following parameters:
+		1. int arr: an array of integers
+
+
+********************************************** SOLUTION **********************************************
+
+def average(array):
+    
+    # Converting the input list of average heights into set to eradicate the duplicate values 
+    # from the list.
+    input_set = set(array)
+    
+    # Using len() python in-built function to calculate the number of elements in the iterable 
+    # input object.
+    input_set_length = len(input_set)
+    
+    # Using sum() python in-built function to calculate the sum of all the integer elements in the 
+    # iterable input object.
+    input_set_sum = sum(input_set)
+    
+    # Calculating the average of distinct heights using formula of float dividing the sum to the 
+    # count of distinct values.
+    input_set_average = input_set_sum / input_set_length
+    
+    # Returning the average height.
+    return input_set_average
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    result = average(arr)
+    print(result)

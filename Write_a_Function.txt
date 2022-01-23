@@ -1,0 +1,38 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean 
+	True, otherwise return False.
+
+	Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. 
+	It is only necessary to complete the is_leap function.
+
+
+********************************************** SOLUTION **********************************************
+
+# Creating a function to check whether the input year is leap year or not.
+def is_leap(year):
+    
+    # Creating a bool variable to represent leap year.
+    leap = False
+    
+    # Checking for condition where input year should be divisible by 4 but not be divisible by 100. 
+    # Here we have used modulo operator to ensure that it is completely divisible with no remainder.
+    if year % 4 == 0 and year % 100 != 0:
+        
+        # Turning the leap bool variable True.
+        leap = True
+        
+    # Checking for condition where input year should be divisible by both 100 and 400 without 
+    # any remainder.
+    elif year % 400 == 0 and year % 100 == 0:
+        
+        # Turning the leap bool variable True.
+        leap = True
+    
+    # Returning the leap year bool value.
+    return leap
+
+year = int(input())
+print(is_leap(year))

@@ -1,0 +1,62 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You have a non-empty set , and you have to execute  commands given in  lines.
+	The commands will be pop, remove and discard.
+
+	Input Format :-
+	1. The first line contains integer n, the number of elements in the set s.
+	2. The second line contains n space separated elements of set s. 
+		All of the elements are non-negative integers, less than or equal to 9.
+	3. The third line contains integer N, the number of commands.
+	4. The next N lines contains either pop, remove and/or discard commands followed by their 
+		associated value.
+
+
+********************************************** SOLUTION **********************************************
+
+# Storing the length of set as user input into variable.
+set_length = int(input())
+
+# Taking in white space seperated string as set value from user.
+# Using input() function to take in input from user.
+# Using split() python in-built function to split the string and convert it into 
+# list of strings.
+# Using map() python function to change data type of input value to int.
+# Using set() python data conversion function to convert the list of input value 
+# into set data type.
+set_value = set(map(int, input().split()))
+
+# Storing in the number of commands as input from user.
+commands_count = int(input())
+
+# Using For loop to iterate through the sequence of the commands_count.
+for _ in range(commands_count):
+    
+    # Storing command in every iteration and converting it into list for ease.
+    command = input().split()
+    
+    # Checking for command type to be 'remove'.
+    # Using list indexing to access the command string in list at index 0.
+    if command[0].lower() == 'remove':
+        
+        # Using remove() python set function to remove value from set.
+        set_value.remove(int(command[1]))
+        
+    # Checking for command type to be 'discard'.
+    elif command[0].lower() == 'discard':
+        
+        # Using discard() python set function to remove value from set.
+        set_value.discard(int(command[1]))
+    
+    # Is the command is neither 'remove' or 'discard' then it's pop.
+    else:
+        
+        # Using pop() python set function to pop the arbitary value from set.
+        set_value.pop()
+  
+# Using sum() python in-built function to calculate the sum of all the elements
+# in the iterable input.
+# Printing the sum of processed set.
+print(sum(set_value))

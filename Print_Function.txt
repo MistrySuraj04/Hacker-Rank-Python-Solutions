@@ -1,0 +1,31 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	The included code stub will read an integer, n, from STDIN.
+
+	Without using any string methods, try to print the following:
+	123...n
+
+	Note that "..." represents the consecutive values in between.
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    n = int(input())
+    output_string = "" # Variable to store output result.
+    
+    # Using For Loop to iterate through every single number including the input number.
+    # range() function is python in-built function used to create a sequence of numbers. 
+    # There are two input parameters first one represents the starting point while the second 
+    # represents the ending point.
+    # range function starts the sequence from 0 till the input variable(excluded). 
+    for number in range(1, n+1):
+        
+        # Appeding the number into the output_string variable after converting the number from int 
+        # data-type to string.
+        output_string += str(number)
+        
+    print(output_string) # Printing out the output_string.

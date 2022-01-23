@@ -1,0 +1,66 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 
+	You are given a string .
+	Your task is to find out if the string contains: alphanumeric characters, alphabetical 
+	characters, digits, lowercase and uppercase characters. 
+
+	Output Format :-
+
+	In the first line, print True if S has any alphanumeric characters. Otherwise, print False.
+	In the second line, print True if S has any alphabetical characters. Otherwise, print False.
+	In the third line, print True if S has any digits. Otherwise, print False.
+	In the fourth line, print True if S has any lowercase characters. Otherwise, print False.
+	In the fifth line, print True if S has any uppercase characters. Otherwise, print False. 
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    s = input()
+    
+    # Creating a validator dictionary to store all validations with their bool values in it.
+    validator_dict = {"alphanumeric": False, "alphabetical": False, "digits": False, 
+    "lowercase": False, "uppercase": False}
+    
+    # Using For loop to iterate through every character of the input string.
+    for char in s:
+        
+        # Checking for character to be alphanumeric.
+        if char.isalnum():
+            
+            # Changing the validation bool value in dictionary.
+            validator_dict['alphanumeric'] = True
+         
+        # Checking for character to be alphabetical.
+        if char.isalpha():
+            
+             # Changing the validation bool value in dictionary.
+            validator_dict['alphabetical'] = True
+            
+        # Checking for character to be digit.. 
+        if char.isdigit():
+            
+             # Changing the validation bool value in dictionary.
+            validator_dict['digits'] = True
+            
+        # Checking for character to be lowercase.   
+        if char.islower():
+            
+             # Changing the validation bool value in dictionary.
+            validator_dict['lowercase'] = True
+            
+        # Checking for character to be in upper case.  
+        if char.isupper():
+            
+             # Changing the validation bool value in dictionary.
+            validator_dict['uppercase'] = True
+    
+    # Using For loop to iterate through and print the bool values for every validator in the 
+    # dictionary.
+    # Using values() python in-built dictionary function which lets us iterate through only the 
+    # values in the dictionary.
+    for result in validator_dict.values():
+        print(result)

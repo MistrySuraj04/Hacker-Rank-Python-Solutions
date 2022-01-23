@@ -1,0 +1,43 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	The students of District College have subscriptions to English and French newspapers. 
+	Some students have subscribed only to English, some have subscribed to only French and some 
+	have subscribed to both newspapers.
+
+	You are given two sets of student roll numbers. One set has subscribed to the English 
+	newspaper, and the other set is subscribed to the French newspaper. The same student could 
+	be in both sets. Your task is to find the total number of students who have subscribed to at 
+	least one newspaper.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking set_a length user input.
+set_a_len = input()
+
+# Storing user input set_a values into a variable. 
+set_a = set(input().split())
+
+# Taking set_b length user input.
+set_b_len = input()
+
+# Storing user input set_b values into a variable. 
+set_b = set(input().split())
+
+# Here we have used set() python in-built data conversion function to change input data type from 
+# list to set as we are using split() another python in-built function to seperate the input and 
+# convert it into list.
+
+# Using union() pyton in-built set function to merge both the set values and create a new set with 
+# unique values of both the sets.
+set_union = set_a.union(set_b)
+
+# Using len() python in-built function to determine the number of elements in an iterable input.
+set_union_len = len(set_union)
+
+# Printing the set union length.
+print(set_union_len)

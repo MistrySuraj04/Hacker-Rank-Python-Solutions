@@ -1,0 +1,57 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 
+
+	Given an integer, n, perform the following conditional actions:
+
+	If n is odd, print Weird
+	If n is even and in the inclusive range of 2 to 5, print Not Weird
+	If n is even and in the inclusive range of 6 to 20, print Weird
+	If n is even and greater than 20, print Not Weird
+
+
+********************************************** SOLUTION **********************************************
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    # strip() is another in-built python string function which is used to remove extra white space 
+    # characters from boht the ends of the string.
+    n = int(input().strip())
+    
+    # Using conditional statement to alter the flow of execution as per conditions.
+    # Checking for input number to be even.
+    if n % 2 == 0:
+        
+        # Passing the input number if it is less than 1.
+        if n < 1:
+            pass
+        
+        # Checking for input number to be in inclusive range of 2 to 5.
+        elif n <= 5 and n >= 2: 
+            print("Not Weird")
+            
+        # Checking for input number to be in inclusive range of 6 to 20.
+        elif n <= 20 and n >= 6:
+            print("Weird")
+            
+        # Checking for input number to be greater than 20 but less than equal to 100 as per constraint 
+	# mentioned in question.
+        elif n <= 100 and n > 20:
+            print("Not Weird")
+            
+    # If the input number is not even then it will automatically be odd.
+    # If the IF condition is not satisfied then flow will come into else part.
+    else:
+        print("Weird")
+
+    

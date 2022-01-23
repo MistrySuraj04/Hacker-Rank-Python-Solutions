@@ -1,0 +1,26 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 
+	The provided code stub reads and integer, n, from STDIN. For all non-negative integers i < n,
+	print i * i.
+
+	Example : n = 3
+
+	The list of non-negative integers that are less than n = 3 is [0, 1, 2]. 
+	Print the square of each number on a separate line.
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    n = int(input())
+    
+    # Using for loop along with range function to iterate through every number till the sequence of 
+    # user entered number.
+    for number in range(n):
+        
+        # Printing the square of every number in the sequence.
+        # Every square will print in new line as print statement is inside For loop.
+        print( number * number )

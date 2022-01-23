@@ -1,0 +1,37 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Apply your knowledge of the .add() operation to help your friend Rupal.
+
+	Rupal has a huge collection of country stamps. She decided to count the total number of 
+	distinct country stamps in her collection. She asked for your help. You pick the stamps one 
+	by one from a stack of N country stamps.
+
+	Find the total number of distinct country stamps.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Declaring variable to store stamp country names in list.
+stamp_country_set = set()
+
+# Taking in the count of stamps from the user.
+stamp_count = int(input())
+
+# Using For loop to iterate through the sequence of stamp_count using range() python in-built 
+# function which generates sequence for input integer value.
+for stamp_country in range(stamp_count):
+    
+    # Storing input stamp country name in list.
+    stamp_country_set.add(input())
+
+
+# Using len() python in-built function to determine the count of elements in the specified iterable 
+# input value which is set in this case.
+distinct_stamp_count = len(stamp_country_set)
+
+# Printing out the distinct stamp count.
+print(distinct_stamp_count)

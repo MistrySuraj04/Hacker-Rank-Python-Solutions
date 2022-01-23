@@ -1,0 +1,31 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 
+	You are given a string  and width .
+	Your task is to wrap the string into a paragraph of width .
+
+	Function Description :-
+	Complete the wrap function in the editor below.
+	wrap has the following parameters:
+	1. string string: a long string
+	2. int max_width: the width to wrap to
+
+	Returns :-
+	1. string: a single string with newline characters ('\n') where the breaks should be
+
+
+********************************************** SOLUTION **********************************************
+
+import textwrap
+
+def wrap(string, max_width):
+    # Here we have used the fill function of textwrap library.
+    # This function basically wraps a long string into a single paragraph formed by collection of 
+    # sub strings with specified length.
+    return textwrap.fill(string, max_width)
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)

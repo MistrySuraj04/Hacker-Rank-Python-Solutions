@@ -1,0 +1,45 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You are given two sets, A and B.
+	Your job is to find whether set A is a subset of set B.
+
+	If set A is subset of set B, print True.
+	If set A is not a subset of set B, print False.
+
+	Input Format :- 
+	1. The first line will contain the number of test cases, T.
+	2. The first line of each test case contains the number of elements in set A.
+	3. The second line of each test case contains the space separated elements of set A.
+	4. The third line of each test case contains the number of elements in set B.
+	5. The fourth line of each test case contains the space separated elements of set B.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking the test cases count from user as input.
+test_cases_count = int(input())
+
+# Uisng For loop to iterate through the sequence of test_cases_count created with the help of 
+# range() python in-built function which takes in int as input and returns sequence starting with 0 
+# and ending with one values less than input.
+for _ in range(test_cases_count):
+    
+    # Taking in the length of first set as input from user.
+    set_a_len = int(input())
+
+    # Using split() python in-built function to split the string and convert it into list of strings.
+    # Using map() python function to change data type of input value to int.
+    # Using set() python data conversion function to convert the list of input value into set data type.
+    set_a = set(map(int, input().split()))
+
+    # Taking in the length of first set as input from user.
+    set_b_len = int(input())
+    set_b = set(map(int, input().split()))
+    
+    result_bool = set_a.issubset(set_b)
+    print(result_bool)
+  

@@ -1,0 +1,38 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 
+	In this challenge, the user enters a string and a substring. You have to print the number of 
+	times that the substring occurs in the given string. String traversal will take place from 
+	left to right, not from right to left.
+
+	NOTE: String letters are case-sensitive.
+
+
+********************************************** SOLUTION **********************************************
+
+def count_substring(string, sub_string):
+    
+    # Creating a variable to store the sub string occurence count.
+    occurence_count = 0
+    
+    # Using For loop to iterate through the string length sequence.
+    # Length of sub string is substracted from the string to avoid looping through the last characters 
+    # where sub string can not be found.
+    for index in range( ( len(string) - len(sub_string) ) + 1 ):
+        
+        # Using string slicing and indexing checking for presence of substring.
+        if string[index : index + len(sub_string)] == sub_string:
+            
+            # Incrementing the occurence count if sub string is found.
+            occurence_count += 1
+    
+    # Returning the count of sub string occurence.
+    return occurence_count
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)

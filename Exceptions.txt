@@ -1,0 +1,36 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You are given two values  and .
+	Perform integer division and print .
+
+	Input Format :-
+	1. The first line contains , the number of test cases.
+	2. The next  lines each contain the space separated values of  and .
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking in the number of test cases as input.
+number_of_test_cases = int(input());
+
+# Looping the sequence of test_cases_count which was created using range() pyhton built-in function.
+for test_case in range(number_of_test_cases):
+    
+    # Try Block.
+    try:
+        # Taking in num1 and num2 as Input value.
+        num1, num2 = input().split()
+        print(int(num1) // int(num2)) # Printing the modulo of two numbers.
+    
+    # Except block to catch the Zero Division Error.
+    except ZeroDivisionError as zero_div_error:
+        print("Error Code: " + str(zero_div_error))
+    
+    # Except block to catch the Value Error.
+    except ValueError as value_error:
+        print("Error Code: " + str(value_error))
+        

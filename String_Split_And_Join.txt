@@ -1,0 +1,32 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
+
+	Function Description :-
+
+	Complete the split_and_join function in the editor below.
+	split_and_join has the following parameters:
+	string line: a string of space-separated words
+
+
+********************************************** SOLUTION **********************************************
+
+# Defining a function to perform the task of replacing the white space character with '-'.
+def split_and_join(line):
+    
+    # Splitting the input line with split() python in-built string function from white spaces to 
+    # convert it into list.
+    # Then using the list for creating a output_string variable and storing the value in it after 
+    # joining the elements of list with '-' string using join() pyhton in-built function which takes 
+    # iterables as input and joins them with append string.
+    output_string = '-'.join(line.split())
+    
+    # Returning the new formed output_string.
+    return output_string
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)

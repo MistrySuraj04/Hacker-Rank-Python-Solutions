@@ -1,0 +1,52 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Let's learn about list comprehensions! You are given three integers X,Y and Z representing 
+	the dimensions of a cuboid along with an integer N. You have to print a list of all possible 
+	coordinates given by (i,j,k) on a 3D grid where the sum of i+j+k is not equal to N. Here, 
+	0<=i<=X; 0<=j<=Y; 0<=k<=Z
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    # Creating a variable to store permutations in list format.
+    output_list = []
+    
+    # Looping through the sequence of x including x input.
+    for num1 in range(x+1):
+        
+        # Looping through the sequence of y including y input.
+        for num2 in range(y+1):
+            
+            # Looping through the sequence of z including z input.
+            for num3 in range(z+1):
+                
+                # Using conditional statement to check for the sum of all the three numbers.
+                # If sum of all three numbers is equal to fourth input then pass.
+                if num1 + num2 + num3 == n:
+                    continue
+                
+                # If sum of all three numbers is not equal to n the fourth input the create a 
+		# permutation and append it into the output_list.
+                else:
+                    # Building up permutation in desired format.
+                    permutation = [num1, num2, num3]
+                    
+                    # Using append() python list function to add permutation value into the 
+		    # list variable.
+                    output_list.append(permutation)
+
+    # Printing out the output_list containing all the permutations.
+    print(output_list)
+
+BONUS :- 
+# Solution in real one liner list comprehension way :-
+output_list = [[num1, num2, num3] for num1 in range(x+1) for num2 in range(y+1) for num3 in range(z+1) if num1 + num2 + num3 != n]

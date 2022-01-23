@@ -1,0 +1,88 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Consider a list (list = []). You can perform the following commands:
+
+	1. insert i e: Insert integer e at position i.
+	2. print: Print the list.
+	3. remove e: Delete the first occurrence of integer e.
+	4. append e: Insert integer  at the end of the list.
+	5. sort: Sort the list.
+	6. pop: Pop the last element from the list.
+	7. reverse: Reverse the list.
+	Initialize your list and read in the value of n followed by n lines of commands where each 
+	command will be of the 7 types listed above. Iterate through each command in order and perform 
+	the corresponding operation on your list
+
+
+********************************************** SOLUTION **********************************************
+
+if __name__ == '__main__':
+    # input() is in-built python function which helps developer store user input.
+    N = int(input())
+    
+    # Creating a output_list variable to store the resultant list after performing all the user 
+    # input commands.
+    output_list = []
+    
+    # Using For loop to iterate through sequence of numbers till user input.
+    for command in range(N):
+        
+        # Storing the user list operation request in list data type variable.
+        # split() is a python built-in string function which splits the string into pieces by the 
+	# input character and returns output in form of list.
+    	# map() is a python built-in function which returns iterable after applying the condition 
+	# to every element of the input.
+    	# list() is another python built-in type conversion function which is used to convert data 
+	# type of variable to list.
+        request = list(map(str, input().split()))
+        
+        # Checking for command type to be insert in user request list.
+        if request[0].lower() == 'insert':
+            
+            # Using insert() python in-built list function to insert element into list at 
+	    # specific index.
+            # Format .insert(index, value)
+            output_list.insert(int(request[1]), int(request[2]))
+            
+        # Checking for command type to be print in user request list.
+        elif request[0].lower() == 'print':
+            
+            # Using print() python in-built function to print the output_list.
+            print(output_list)
+            
+        # Checking for command type to be remove in user request list.
+        elif request[0].lower() == 'remove':
+            
+            # Using remove() python in-built list function to remove element from the list by passing 
+	    # the value of element.
+            output_list.remove(int(request[1]))
+            
+        # Checking for command type to be append in user request list.
+        elif request[0].lower() == 'append':
+            
+            # Using append() python in-built list function to add a element at the end of the list.
+            output_list.append(int(request[1]))
+            
+        # Checking for command type to be sort in user request list.
+        elif request[0].lower() == 'sort':
+            
+            # Using sort() python in-built list function to sort the list.
+            output_list.sort()
+            
+        # Checking for command type to be pop in user request list.
+        elif request[0].lower() == 'pop':
+            
+            # Using pop() python in-built list function to remove the last element of the list.
+            output_list.pop()
+            
+        # Checking for command type to be insert in user request list.
+        elif request[0].lower() == 'reverse':
+            
+            # Using reverse() python in-built list function to store the list in reverse format.
+            output_list.reverse()
+            
+        # Passing the iteration if the user input does not match any of the above mentioned commands.
+        else:
+            pass

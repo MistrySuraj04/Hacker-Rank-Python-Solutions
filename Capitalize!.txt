@@ -1,0 +1,52 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Given an integer, n, and n space-separated integers as input, create a tuple, t, of those n 
+	integers. Then compute and print the result of hash(t).
+
+	Note: hash() is one of the functions in the __builtins__ module, so it need not be imported.
+
+
+********************************************** SOLUTION **********************************************
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    
+    # Creating a variable of list data type to store names after being capitalizing them.
+    output_list = []
+    
+    # Using For loop to iterate through the names in the input s string after converting it from 
+    # string to list by using split() python in-built string function.
+    for name in s.split(" "):
+        
+        # Using capitalize() python in-built string function convert the input string first letter 
+        # into capital letter.
+        # Appending the name into the output_list variable.
+        output_list.append(name.capitalize())
+    
+    # Using join() python in-built function which takes iterbales as input and joins then to form a 
+    # single string as output.
+    output_string = " ".join(output_list)
+    
+    # Returning the output string.
+    return output_string
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
