@@ -1,0 +1,62 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Mr. Anant Asankhya is the manager at the INFINITE hotel. The hotel has an infinite 
+	amount of rooms.
+	One fine day, a finite number of tourists come to stay at the hotel.
+	The tourists consist of:
+	→ A Captain.
+	→ An unknown group of families consisting of K members per group where K ≠ 1.
+
+	The Captain was given a separate room, and the rest were given one room per group.
+	Mr. Anant has an unordered list of randomly arranged room entries. The list consists of 
+		the room numbers for all of the tourists. The room numbers will appear  times per 
+		group except for the Captain's room.
+	Mr. Anant needs you to help him find the Captain's room number.
+	The total number of tourists or the total number of groups of families is not known to you.
+	You only know the value of K and the room number list.
+
+	Input Format :-
+	The first line consists of an integer, K, the size of each group.
+	The second line contains the unordered elements of the room number list.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking and storing in the group size value as input from user.
+group_size = int(input())
+
+# Taking and storing the unordered list of room numbers as input from user.
+room_number_list = list(map(int, input().split()))
+
+# Creating a dictionary to store room number and it's count to have ease in finding out the captains 
+# room as it will occur only once in the list.
+room_number_count_dict = {}
+
+# Using For loop to iterate through the unordered input room numbers list.
+for room_number in room_number_list:
+    
+    # Using conditional statement to alter the flow of execution as per the presence of room number 
+    # is the room number count dict.
+    # If the room number is not present in the dictionary then it will add the room number into 
+    # dictionary with initial value as 1.
+    # Else the value of room number occurence in the dictionary will be incremented by value 1.
+    if room_number not in room_number_count_dict.keys():
+        room_number_count_dict[room_number] = 1
+    else:
+        room_number_count_dict[room_number] += 1
+        
+# Using For loop to iterate through the key value pairs of room number count dictionary with the 
+# help of items() python in-built dictionary function which allows user to iterate through both key 
+# and value at the same time. 
+for room_number, count in room_number_count_dict.items():
+    
+    # Checking for room number count value to be 1 as only captain's room number will appear in the 
+    # list once.
+    if count == 1:
+        
+        # Printing the room number of captain.
+        print(room_number)

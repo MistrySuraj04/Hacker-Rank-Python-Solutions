@@ -1,0 +1,29 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You are given a complex z. Your task is to convert it to polar coordinates.
+
+	Input Format :-
+	A single line containing the complex number z. 
+	Note: complex() function can be used in python to convert the input as a complex number.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Importing cmath python module(library).
+import cmath
+
+# Taking and storing in the input and converting it into complex data type by using complex() 
+# python buit-in data type conversion function.
+r = complex(input().strip())
+
+# Using polar() python built-in cmath module function which converts the complex number into polar 
+# co-ordinates.
+# In the output of polar function first value represents value of r and second value represents the 
+# value of counter clock wise angle.
+print(cmath.polar(r)[0])
+print(cmath.polar(r)[1])
+
+

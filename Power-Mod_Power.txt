@@ -1,0 +1,29 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You are given three integers: a, b, and m. Print two lines.
+	On the first line, print the result of pow(a,b). 
+	On the second line, print the result of pow(a,b,m).
+
+	Input Format :-
+	The first line contains a, the second line contains b, and the third line contains m.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking and storing the constant, power and mod_value values from the user as input.
+constant = int(input())
+power = int(input())
+mod_value = int(input())
+
+# Printing the power of constant using pow() python built-in math module function which when passed 
+# two input values return power of constant with respect to second input value passed in the function.
+print(pow(constant, power))
+
+# Printing the mod power of constant using pow() python built-in math module function when passed 
+# three input values return mod power of constant by calculating the power in usual way then adding 
+# mod of third value passed in function. 
+print(pow(constant, power, mod_value))

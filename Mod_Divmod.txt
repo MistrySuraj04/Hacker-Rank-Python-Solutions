@@ -1,0 +1,35 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Read in two integers, a and b, and print three lines.
+	The first line is the integer division a//b 
+	(While using Python2 remember to import division from __future__).
+	The second line is the result of the modulo operator: a%b.
+	The third line prints the divmod of a and b.
+
+	Input Format :-
+	The first line contains the first integer, a, and the second line contains 
+		the second integer, b.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking and storing the dividend and divisor values as input from user.
+dividend = int(input())
+divisor = int(input())
+
+# Printing int division of dividend and divisor in first line.
+# int division returns the quotient value of division.
+print(dividend // divisor)
+
+# Printing modulo division of dividend and divisor in second line.
+# modulo operator return the remainder value of division.
+print(dividend % divisor)
+
+# Printing the divmod value of dividend and divisor in third line.
+# The divmod() is python built-in math module function which return a tuple of quotient and remainder 
+# value when two input values are passed in the function.
+print(divmod(dividend, divisor))

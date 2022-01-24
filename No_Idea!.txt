@@ -1,0 +1,57 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	There is an array of n integers. There are also 2 disjoint sets, A and B, each containing 
+	m integers. You like all the integers in set A and dislike all the integers in set B. 
+	Your initial happiness is 0. For each i integer in the array, if i∈A, you add 1 to your 
+	happiness. If i∈B, you add -1 to your happiness. Otherwise, your happiness does not change. 
+	Output your final happiness at the end.
+
+	Note: Since A and B are sets, they have no repeated elements. However, the array might contain 
+	duplicate elements.
+
+	Input Format :-
+	The first line contains integers n and m separated by a space.
+	The second line contains n integers, the elements of the array.
+	The third and fourth lines contain m integers, A and B, respectively
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking and storing length of both the sets which will be input from user.
+_ = input()
+
+# Taking and storing set_a values from user and converting it into list as there is a possibility of 
+# duplicate values.
+set_a = list(map(int, input().split()))
+
+# Taking and storing values of other two disjoint sets as input from user.
+other_set_a = set(map(int, input().split()))
+other_set_b = set(map(int, input().split()))
+
+# Creating a variable to store the happiness count.
+happiness = 0
+    
+# Looping through the elements of set_a.
+for element in set_a:
+    
+    # Using conditional statement to alter the execution flow and execute code accordingly as per the 
+    # value matches in disjoint sets.
+    if element in other_set_a:
+        
+        # If element value is there is other_set_a which is like set then incrementing the value of 
+	# happiness count by 1.
+        happiness += 1
+        
+    elif element in other_set_b:
+        
+        # If element value is there is other_set_a which is dislike set then decrementing the value of 
+	# happiness count by 1.
+        happiness -= 1
+        
+# After performing all the operations printing the happiness count.
+print(happiness)
+    

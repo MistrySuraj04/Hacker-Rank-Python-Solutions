@@ -1,0 +1,24 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	Read four numbers, a, b, c, and d, and print the result of a^b + c^d.
+
+	Input Format :-
+	Integers a, b, c, and d are given on four separate lines, respectively.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Taking and storing all four int input values from user into variables
+value_1 = int(input())
+value_2 = int(input())
+value_3 = int(input())
+value_4 = int(input())
+
+# Using pow() python built-in math module function to calculate the power of two input values.
+# Summing up value of two power function as requested in problem statement and printing out 
+# the result sum.
+print(pow(value_1, value_2) + pow(value_3, value_4))

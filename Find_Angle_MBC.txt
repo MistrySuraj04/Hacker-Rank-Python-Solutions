@@ -1,0 +1,44 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	ABC is a right triangle, 90° at B.
+	Therefore, ∠ABC 90°.
+	Point M is the midpoint of hypotenuse AC.
+	You are given the lengths AB and BC.
+	Your task is to find ∠MBC (angle Θ°, as shown in the figure) in degrees.
+
+	Input Format :-
+	The first line contains the length of side .
+	The second line contains the length of side .
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Importing python math module.
+import math
+
+# Taking and storing lenght of two sides of triangle as input from user.
+length_ab = int(input())
+length_bc = int(input())
+
+# Calculating the value of hypotenuse using hypot() python built-in math module function which 
+# outputs the hypotenuse lenght of triangle when length of other two sides of triangle are passed 
+# as parameter.
+hypotenuse = math.hypot(length_ab, length_bc)
+
+# Finding out the angle from metting of two input triangle sides to hypotenuse.
+# round() is a python built-in function which returns a floating point value which is the 
+# rounded version.
+# degrees() is a python built-in math module function which is used to convert the input angle from 
+# radian to degree.
+# acos() is a python built-in math module function which returns the arc cosine value of number.
+angle = round(math.degrees(math.acos(length_bc/hypotenuse)))
+
+# In degree we have stores the degree symbol.
+# chr() is a python built-in function which return a string which represents respective input unicode.
+degree = chr(176)
+
+# Printing the angle and degree symbol with seperator as none.
+print(angle,degree, sep='')

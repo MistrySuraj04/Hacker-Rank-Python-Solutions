@@ -1,0 +1,35 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You are given a two lists A and B. Your task is to compute their cartesian product AXB.
+
+	Example
+	A = [1, 2]
+	B = [3, 4]
+	AxB = [(1, 3), (1, 4), (2, 3), (2, 4)]
+	Note: A and B are sorted lists, and the cartesian product's tuples should be output in 
+		sorted order.
+
+	Input Format :-
+	The first line contains the space separated elements of list A.
+	The second line contains the space separated elements of list B.
+	Both lists have no duplicate integer elements.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Importing product function from itertools python module(library).
+from itertools import product
+
+# Taking and storing in the list values as input from user.
+# We have used list() python built-in data type conversion function.
+# We have used map() python built-in function to convert the data type of input from user to int.
+list_a = list(map(int, input().split()))
+list_b = list(map(int, input().split()))
+
+# Using the product() python built-in itertools module function we can calculate the cartesian 
+# product of input lists.
+# Here we have * at the beginning because of two input lists.
+print(*(product(list_a, list_b)))

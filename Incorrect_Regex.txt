@@ -1,0 +1,49 @@
+
+********************************************** QUESTION **********************************************
+
+TASK :- 		
+	You are given a string S.
+	Your task is to find out whether S is a valid regex or not.
+
+	Input Format :-
+	The first line contains integer T, the number of test cases.
+	The next T lines contains the string S.
+
+
+********************************************** SOLUTION **********************************************
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Importing re python regex library.
+import re
+
+# Taking number of test cases count from user and storing it in variable.
+regex_test_count = int(input())
+
+# Using For loop to iterate through the sequence of regex_test_count which is created with the help of 
+# range() python in-built function which is used to return iterable sequence when int input is passed.
+for _ in range(regex_test_count):
+    
+    # Creating a bool variable to store result of regex.
+    is_valid_regex = False
+    
+    # Try block.
+    try:
+        
+        # Taking and storing the regex as input from the user.
+        regex = str(input())
+        
+        # Using compile() python re library function to compile the passed regex as input to verify if 
+	# it is valid or not.
+        re.compile(regex)
+        
+        # Storing True as value in bool variable if regex compiles successfully.
+        is_valid_regex = True
+    
+        # Except block.
+    except:
+        
+        # Storing False as value in bool variable if regex compiles with error.
+        is_valid_regex = False
+        
+    # Printing the bool value for every regex passed.
+    print(is_valid_regex)
